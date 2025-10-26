@@ -8,10 +8,10 @@ namespace ContactCatalog.Services;
 
     public class ContactService
     {
-        private readonly ContactRepository _repo;
+        private readonly IContactRepository _repo;
         private readonly ILogger<ContactService> _logger;
 
-        public ContactService(ContactRepository repo, ILogger<ContactService> logger)
+        public ContactService(IContactRepository repo, ILogger<ContactService> logger)
         {
             _repo = repo;
             _logger = logger;

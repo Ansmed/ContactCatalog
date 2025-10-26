@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 
 namespace ContactCatalog.Repositories;
 
-public class ContactRepository
+public class ContactRepository : IContactRepository
 {
     private readonly Dictionary<int, Contact> _contacts = new();
     private readonly HashSet<string> _emails = new(StringComparer.OrdinalIgnoreCase);

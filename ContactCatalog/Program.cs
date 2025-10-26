@@ -18,7 +18,7 @@ class Program
         var serviceLogger = loggerFactory.CreateLogger<ContactService>();
         var menuLogger = loggerFactory.CreateLogger<MenuService>();
         
-        var repository = new ContactRepository(repoLogger);
+        IContactRepository repository = new ContactRepository(repoLogger);
         var service = new ContactService(repository, serviceLogger);
         var menu = new MenuService(service, menuLogger);
         menu.PrintMenu();
